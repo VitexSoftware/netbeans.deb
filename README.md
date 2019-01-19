@@ -1,7 +1,9 @@
+![Screenshot](https://raw.githubusercontent.com/Vitexus/netbeans.deb/master/netbeans.png)
+
 Apache Netbeans Debian package
 ==============================
 
-Repacked binary of https://github.com/apache/incubator-netbeans
+Repacked binary of https://github.com/apache/incubator-netbeans ready to use with Debian
 
 
 Installation
