@@ -1,0 +1,31 @@
+bin/*		/usr/bin
+
+netbeans.desktop /usr/share/applications/
+netbeans.png /usr/share/pixmaps/
+netbeans.conf /etc/
+
+icons/hicolor/512x512/netbeans.png /usr/share/icons/hicolor/512x512/apps
+icons/hicolor/256x256/netbeans.png /usr/share/icons/hicolor/256x256/apps
+icons/hicolor/128x128/netbeans.png /usr/share/icons/hicolor/128x128/apps
+icons/hicolor/64x64/netbeans.png /usr/share/icons/hicolor/64x64/apps
+netbeans.svg /usr/share/icons/hicolor/scalable/apps
+
+
+netbeans/apisupport	/usr/share/netbeans
+netbeans/ergonomics	/usr/share/netbeans
+netbeans/extide		/usr/share/netbeans
+netbeans/groovy		/usr/share/netbeans
+netbeans/harness	/usr/share/netbeans
+netbeans/ide		/usr/share/netbeans
+netbeans/java		/usr/share/netbeans
+netbeans/javafx		/usr/share/netbeans
+netbeans/licenses	/usr/share/netbeans
+netbeans/nb		/usr/share/netbeans
+netbeans/php		/usr/share/netbeans
+netbeans/platform	/usr/share/netbeans
+netbeans/profiler	/usr/share/netbeans
+netbeans/webcommon	/usr/share/netbeans
+netbeans/websvccommon	/usr/share/netbeans
+
+netbeans/etc/netbeans.clusters /usr/share/netbeans/etc
+netbeans/etc/netbeans.import   /usr/share/netbeans/etc
