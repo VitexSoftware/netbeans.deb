@@ -10,7 +10,7 @@ Vcs-Browser: https://github.com/Vitexus/netbeans.deb
 
 Package: netbeans
 Architecture: all
-Depends: ${misc:Depends},default-jre|openjdk-11-jre|openjdk-8-jre|openjdk-9-jre|oracle-java8-jre|oracle-java9-jre,libnotify-bin
+Depends: ${misc:Depends},java-common,default-jre|openjdk-11-jre|openjdk-8-jre|openjdk-9-jre|oracle-java8-jre|oracle-java9-jre,libnotify-bin
 Description: Apache NetBeans is an open source development environment, tooling platform, and application framework.
  Quickly and easily develop desktop, mobile, and web applications
  with Java, JavaScript, HTML5, PHP, C/C++ and more.

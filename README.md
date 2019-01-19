@@ -1,7 +1,7 @@
 Apache Netbeans Debian package
 ==============================
 
-
+Repacked binary of https://github.com/apache/incubator-netbeans
 
 
 Installation
@@ -14,3 +14,19 @@ apt update
 apt install netbeans
 ```
 
+or 
+
+```
+igdebi https://www.vitexsoftware.cz/pool/main/n/netbeans/netbeans_10.0-1_all.deb
+```
+
+
+
+![Screenshot](https://raw.githubusercontent.com/Vitexus/netbeans.deb/master/screenshot.png)
+
+
+
+See also
+--------
+
+ * https://github.com/VitexSoftware/netbeans-php-tools
