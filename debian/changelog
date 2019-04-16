@@ -1,9 +1,10 @@
-netbeans (10.0-1) UNRELEASED; urgency=medium
+netbeans (11.0-1) UNRELEASED; urgency=medium
   [ vitex ]
-  * Install stable netbeans 10
+  * Install stable netbeans 11
 
   [ Vítězslav Dvořák ]
   * Use default java
   * nbxdebug belongs to netbeans-php-package
+  * 
 
- -- Vítězslav Dvořák <vitex@develoid.jinonice.czf>  Sat, 19 Jan 2019 12:07:26 +0100
+ -- Vítězslav Dvořák <vitex@develoid.jinonice.czf>  Tue, 16 Apr 2019 15:55:10 +0200
