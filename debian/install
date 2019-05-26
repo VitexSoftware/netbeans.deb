@@ -1,4 +1,4 @@
-bin/*		/usr/bin
+bin/netbeans		/usr/bin
 
 netbeans.desktop /usr/share/applications/
 netbeans.png /usr/share/pixmaps/
@@ -11,21 +11,19 @@ icons/hicolor/64x64/netbeans.png /usr/share/icons/hicolor/64x64/apps
 netbeans.svg /usr/share/icons/hicolor/scalable/apps
 
 
-netbeans/apisupport	/usr/share/netbeans
-netbeans/ergonomics	/usr/share/netbeans
-netbeans/extide		/usr/share/netbeans
-netbeans/groovy		/usr/share/netbeans
-netbeans/harness	/usr/share/netbeans
-netbeans/ide		/usr/share/netbeans
-netbeans/java		/usr/share/netbeans
-netbeans/javafx		/usr/share/netbeans
-netbeans/licenses	/usr/share/netbeans
-netbeans/nb		/usr/share/netbeans
-netbeans/php		/usr/share/netbeans
-netbeans/platform	/usr/share/netbeans
-netbeans/profiler	/usr/share/netbeans
-netbeans/webcommon	/usr/share/netbeans
-netbeans/websvccommon	/usr/share/netbeans
-
-netbeans/etc/netbeans.clusters /usr/share/netbeans/etc
-netbeans/etc/netbeans.import   /usr/share/netbeans/etc
+netbeans/nbbuild/netbeans/apisupport	/usr/share/netbeans
+netbeans/nbbuild/netbeans/ergonomics	/usr/share/netbeans
+netbeans/nbbuild/netbeans/extide	/usr/share/netbeans
+netbeans/nbbuild/netbeans/groovy	/usr/share/netbeans
+netbeans/nbbuild/netbeans/harness	/usr/share/netbeans
+netbeans/nbbuild/netbeans/ide		/usr/share/netbeans
+netbeans/nbbuild/netbeans/java		/usr/share/netbeans
+netbeans/nbbuild/netbeans/javafx	/usr/share/netbeans
+netbeans/nbbuild/netbeans/licenses	/usr/share/netbeans
+netbeans/nbbuild/netbeans/nb		/usr/share/netbeans
+netbeans/nbbuild/netbeans/php		/usr/share/netbeans
+netbeans/nbbuild/netbeans/platform	/usr/share/netbeans
+netbeans/nbbuild/netbeans/profiler	/usr/share/netbeans
+netbeans/nbbuild/netbeans/webcommon	/usr/share/netbeans
+netbeans/nbbuild/netbeans/websvccommon	/usr/share/netbeans
+netbeans/nbbuild/netbeans/etc		/usr/share/netbeans

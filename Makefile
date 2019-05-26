@@ -1,12 +1,8 @@
-prepare: download
-	unzip incubating-netbeans-11.0-bin.zip
+prepare:
+	if [ ! -d netbeans ]; then git clone https://github.com/apache/netbeans.git; else cd netbeans; git pull; cd ..; fi;
 
-download:
-	wget -c http://mirror.dkm.cz/apache/incubator/netbeans/incubating-netbeans/incubating-11.0/incubating-netbeans-11.0-bin.zip
-	
-clean:
-	rm -f incubating-netbeans-11.0-bin.zip
-	rm -rf netbeans
+build: prepare
+	ant -DuseExternalJarsOnLinux=true -Dcluster.config=php -buildfile netbeans/build.xml build-nozip
 
 deb:
 	debuild -i -us -uc -b

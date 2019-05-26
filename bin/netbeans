@@ -16,10 +16,6 @@
 # specific language governing permissions and limitations
 # under the License.
 
-#
-# resolve symlinks
-#
-
 PRG=$0
 basedir="/usr/share/netbeans/"
 
@@ -92,44 +88,6 @@ if [ ! -z "$netbeans_extraclusters" ] ; then
     netbeans_clusters="$netbeans_clusters:$netbeans_extraclusters"
 fi
 
-heap_size () {
-    mem=640
-    case "`uname`" in
-        Linux*)
-        mem=`cat /proc/meminfo | grep MemTotal | tr -d [:space:][:alpha:]:`
-        mem=`expr $mem / 1024`
-        ;;
-    SunOS*)
-        mem=`/usr/sbin/prtconf | grep Memory | /usr/bin/tr -dc '[0-9]'`
-        ;;
-    Darwin*)
-        mem=`/usr/sbin/sysctl hw.memsize | tr -d [:alpha:][:space:].:`
-        mem=`expr $mem / 1048576`
-        ;;
-        *) 
-        ;;
-    esac
-    if [ -z "$mem" ] ; then
-        mem=640
-    fi
-    mem=`expr $mem / 5`
-    if [ $mem -gt 1024 ] ; then
-        mem=1024
-    elif [ $mem -lt 96 ] ; then
-        mem=96
-    fi
-    max_heap_size=$mem
-    return 0
-}
-
-
-if grep -v -- "-J-Xmx" >/dev/null <<EOF ; then
-${netbeans_default_options}
-EOF
-        heap_size
-	netbeans_default_options="-J-Xmx${max_heap_size}m ${netbeans_default_options}"
-fi
-
 launchNbexec() {
     nbexec=`grep -v "^#" "$basedir"/etc/netbeans.clusters | grep -v "^$" | grep platform | while read X; do
         if expr "$X" : "/.*" >/dev/null; then
@@ -155,9 +113,21 @@ launchNbexec() {
     fi
 }
 
-notify-send -i /usr/share/pixmaps/netbeans.png -a NetBeans "NetBeans started"
-
-
+# in case of macosx, the apple.laf.useScreenMenuBar property should be ideally in the Info.plist file
+# but it doesn't get propagated into the executed java VM. 
+case "`uname`" in
+    Darwin*)
+        eval launchNbexec \
+            --jdkhome '"$netbeans_jdkhome"' \
+            -J-Xdock:name=NetBeans \
+            '"-J-Xdock:icon=$basedir/nb/netbeans.icns"' \
+            --branding nb \
+            --clusters '"$netbeans_clusters"' \
+            -J-Dnetbeans.importclass=org.netbeans.upgrade.AutoUpgrade \
+            ${netbeans_default_options} \
+            '"$@"'
+        ;;
+    *)
         eval launchNbexec \
             --jdkhome '"$netbeans_jdkhome"' \
             --branding nb \
@@ -165,3 +135,5 @@ notify-send -i /usr/share/pixmaps/netbeans.png -a NetBeans "NetBeans started"
             -J-Dnetbeans.importclass=org.netbeans.upgrade.AutoUpgrade \
             ${netbeans_default_options} \
             '"$@"'
+        ;;
+esac

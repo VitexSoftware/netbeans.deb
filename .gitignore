@@ -1,4 +1,5 @@
 netbeans/
+debian/netbeans/
 
 # Compiled class file
 *.class

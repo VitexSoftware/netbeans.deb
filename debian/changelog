@@ -1,10 +1,10 @@
-netbeans (11.0-1) UNRELEASED; urgency=medium
+netbeans (11.0-2) UNRELEASED; urgency=medium
   [ vitex ]
   * Install stable netbeans 11
 
   [ Vítězslav Dvořák ]
   * Use default java
   * nbxdebug belongs to netbeans-php-package
-  * 
+  * phpunit launcher fixed https://issues.apache.org/jira/browse/NETBEANS-2573
 
  -- Vítězslav Dvořák <vitex@develoid.jinonice.czf>  Tue, 16 Apr 2019 15:55:10 +0200
