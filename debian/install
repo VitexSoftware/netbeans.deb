@@ -1,4 +1,5 @@
 bin/netbeans		/usr/bin
+#bin/nbxdebug		/usr/bin
 
 netbeans.desktop /usr/share/applications/
 netbeans.png /usr/share/pixmaps/

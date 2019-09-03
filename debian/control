@@ -2,7 +2,7 @@ Source: netbeans
 Section: devel
 Priority: optional
 Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
-Build-Depends: debhelper (>= 9), git, ant
+Build-Depends: debhelper (>= 9), git, ant, maven-repo-helper
 Standards-Version: 3.9.5
 Homepage: https://github.com/Vitexus/netbeans.deb
 Vcs-Git: git@github.com:Vitexus/netbeans.deb.git
