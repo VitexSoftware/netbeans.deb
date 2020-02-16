@@ -4,7 +4,7 @@ prepare:
 build: prepare ant
 
 ant:
-	ant -DuseExternalJarsOnLinux=true -Dpermit.jdk9.builds=true -Dcluster.config=php -buildfile netbeans/build.xml build-nozip 
+	ant -DuseExternalJarsOnLinux=true -Dpermit.jdk9.builds=true -Dcluster.config=full -buildfile netbeans/build.xml build-nozip 
 
 deb:
 	debuild -i -us -uc -b
