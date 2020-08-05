@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 # See debhelper(7) (uncomment to enable)
 # output every command that modifies files on the build system.
-#DH_VERBOSE = 1
+DH_VERBOSE = 1
 
 SRC_PACKAGE = netbeans
 PACKAGE = $(SRC_PACKAGE)
@@ -21,7 +21,7 @@ include /usr/share/dpkg/default.mk
 #export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
 override_dh_auto_build:
-	ant -Dpermit.jdk9.builds=true -DuseExternalJarsOnLinux=true -buildfile netbeans/build.xml build-nozip
+	ant -DuseExternalJarsOnLinux=true -buildfile netbeans/build.xml build-nozip
 # main packaging script based on dh7 syntax
 %:
 	dh $@  --with maven_repo_helper
