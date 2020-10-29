@@ -1,9 +1,11 @@
 bin/netbeans		/usr/bin
 #bin/nbxdebug		/usr/bin
 
-netbeans.desktop /usr/share/applications/
-netbeans.png /usr/share/pixmaps/
+debian/org.netbeans.netbeans.metainfo.xml	/usr/share/metainfo/
+debian/netbeans.desktop 			/usr/share/applications/
+netbeans.png 					/usr/share/pixmaps/
 netbeans.conf /etc/
+
 
 icons/hicolor/512x512/netbeans.png /usr/share/icons/hicolor/512x512/apps
 icons/hicolor/256x256/netbeans.png /usr/share/icons/hicolor/256x256/apps

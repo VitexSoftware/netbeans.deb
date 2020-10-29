@@ -21,7 +21,7 @@ include /usr/share/dpkg/default.mk
 #export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
 override_dh_auto_build:
-	ant -DuseExternalJarsOnLinux=true -buildfile netbeans/build.xml build-nozip
+	ant -DuseExternalJarsOnLinux=true  -Dpermit.jdk9.builds=true  -buildfile netbeans/build.xml build-nozip
 # main packaging script based on dh7 syntax
 %:
 	dh $@  --with maven_repo_helper
@@ -29,6 +29,7 @@ override_dh_auto_build:
 override_dh_auto_install:
 	rm -rf debian/netbeans/usr/share/netbeans/ide/bin/nativeexecution/MacOSX*
 	rm -rf debian/netbeans/usr/share/netbeans/ide/bin/nativeexecution/Windows*
+	rm -rf debian/netbeans/usr/share/netbeans/ide/bin/nativeexecution/Windows-x86
 	dh_auto_install
 
 # debmake generated override targets

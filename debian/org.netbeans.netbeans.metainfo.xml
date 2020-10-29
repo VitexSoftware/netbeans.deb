@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>org.netbeans.netbeans</id>
+  
+  <name>NetBeans</name>
+  <summary>Quickly and easily develop desktop, mobile, and web applications with Java, JavaScript, HTML5, PHP, C/C++ and more. </summary>
+  
+  <metadata_license>MIT</metadata_license>
+  <project_license>Apache-2.0</project_license>
+  
+  <description>
+    <p>
+      Apache NetBeans is an open source development environment, tooling platform, and application framework.
+    </p>
+  </description>
+  
+  <launchable type="desktop-id">org.netbeans.netbeans.desktop</launchable>
+  <screenshots>
+    <screenshot type="default">
+      <image>http://vitexsoftware.cz/img/netbeans-ide.png</image>
+    </screenshot>
+  </screenshots>
+</component>
+

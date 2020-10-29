@@ -2,9 +2,9 @@
 Encoding=UTF-8
 Name=NetBeans IDE
 Comment=The Smarter Way to Code
-Exec=/usr/bin/netbeans
+Exec=netbeans
 Icon=netbeans
 Categories=Application;Development;Java;IDE
 Version=1.0
 Type=Application
-Terminal=0
+Terminal=false
