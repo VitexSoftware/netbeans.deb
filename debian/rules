@@ -26,11 +26,17 @@ override_dh_auto_build:
 %:
 	dh $@  --with maven_repo_helper
 
-override_dh_auto_install:
+override_dh_install:
+	dh_install
 	rm -rf debian/netbeans/usr/share/netbeans/ide/bin/nativeexecution/MacOSX*
+	rm -rf debian/netbeans/usr/share/netbeans/ide/bin/nativeexecution/MacOSX-x86/
 	rm -rf debian/netbeans/usr/share/netbeans/ide/bin/nativeexecution/Windows*
 	rm -rf debian/netbeans/usr/share/netbeans/ide/bin/nativeexecution/Windows-x86
-	dh_auto_install
+	rm -rf debian/netbeans/usr/share/netbeans/ide/bin/nativeexecution/Windows-x86_64
+	rm -rf debian/netbeans/usr/share/netbeans/ide/bin/nativeexecution/SunOS-x86
+	rm -rf debian/netbeans/usr/share/netbeans/ide/bin/nativeexecution/SunOS-sparc_64
+	rm -rf debian/netbeans/usr/share/netbeans/harness/launchers/*.exe
+	rm -rf debian/netbeans/usr/share/netbeans/platform/lib/*.exe
 
 # debmake generated override targets
 # This is example for Cmake (See http://bugs.debian.org/641051 )
