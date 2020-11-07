@@ -96,6 +96,7 @@ launchNbexec() {
             echo "$basedir"/$X/lib/nbexec
         fi
     done | head -n 1`
+
     sh=sh
     # #73162: Ubuntu uses the ancient Bourne shell, which does not implement trap well.
     if [ -x /bin/bash ]
@@ -113,29 +114,13 @@ launchNbexec() {
     fi
 }
 
-notify-send -i /usr/share/pixmaps/netbeans.png -a NetBeans "NetBeans started"
+notify-send -i /usr/share/pixmaps/netbeans.png -a NetBeans "Starting $@"
 
-# in case of macosx, the apple.laf.useScreenMenuBar property should be ideally in the Info.plist file
-# but it doesn't get propagated into the executed java VM. 
-case "`uname`" in
-    Darwin*)
-        eval launchNbexec \
-            --jdkhome '"$netbeans_jdkhome"' \
-            -J-Xdock:name=NetBeans \
-            '"-J-Xdock:icon=$basedir/nb/netbeans.icns"' \
-            --branding nb \
-            --clusters '"$netbeans_clusters"' \
-            -J-Dnetbeans.importclass=org.netbeans.upgrade.AutoUpgrade \
-            ${netbeans_default_options} \
-            '"$@"'
-        ;;
-    *)
-        eval launchNbexec \
+
+eval launchNbexec \
             --jdkhome '"$netbeans_jdkhome"' \
             --branding nb \
             --clusters '"$netbeans_clusters"' \
             -J-Dnetbeans.importclass=org.netbeans.upgrade.AutoUpgrade \
             ${netbeans_default_options} \
             '"$@"'
-        ;;
-esac

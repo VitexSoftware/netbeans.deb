@@ -1,4 +1,4 @@
-netbeans (12.2b2) UNRELEASED; urgency=medium
+netbeans (12.2b3) UNRELEASED; urgency=medium
 
   * 11.3 + Upstream Apply
   * r12.0 
@@ -6,7 +6,7 @@ netbeans (12.2b2) UNRELEASED; urgency=medium
   * build again
   * rebuild
 
- -- CyberVitexus <vitex@exiv.jinonice.czf>  Mon, 26 Oct 2020 12:48:15 +0100
+ -- CyberVitexus <vitex@exiv.jinonice.czf>  Sat, 07 Nov 2020 02:30:10 +0100
 
 netbeans (11.1-2) UNRELEASED; urgency=medium
   [ vitex ]

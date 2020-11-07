@@ -6,6 +6,9 @@ build: prepare ant
 ant:
 	ant -DuseExternalJarsOnLinux=true -Dpermit.jdk9.builds=true -Dcluster.config=full -buildfile netbeans/build.xml build-nozip 
 
+tryme:
+	ant -Dpermit.jdk9.builds=true -buildfile netbeans/build.xml tryme
+
 deb:
 	debuild -i -us -uc -b
 
