@@ -2,7 +2,7 @@
 PACKAGE=netbeans
 SRC="${PACKAGE}.svg"
 
-resolutions='16 32 48 64 128 255 512'
+resolutions='16 32 48 64 128 256 512 1024'
 
 for resolution in $resolutions
 do
