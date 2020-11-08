@@ -7,6 +7,7 @@ netbeans.png 					/usr/share/pixmaps/
 netbeans.conf /etc/
 
 
+icons/1024x1024/netbeans.png /usr/share/icons/hicolor/1024x1024/apps
 icons/512x512/netbeans.png /usr/share/icons/hicolor/512x512/apps
 icons/256x256/netbeans.png /usr/share/icons/hicolor/256x256/apps
 icons/128x128/netbeans.png /usr/share/icons/hicolor/128x128/apps
