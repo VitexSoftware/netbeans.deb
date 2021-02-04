@@ -34,6 +34,7 @@ override_dh_install:
 	rm -rf debian/netbeans/usr/share/netbeans/ide/bin/nativeexecution/Windows-x86
 	rm -rf debian/netbeans/usr/share/netbeans/ide/bin/nativeexecution/Windows-x86_64
 	rm -rf debian/netbeans/usr/share/netbeans/ide/bin/nativeexecution/SunOS-x86
+	rm -rf debian/netbeans/usr/share/netbeans/ide/bin/nativeexecution/SunOS-x86_64/
 	rm -rf debian/netbeans/usr/share/netbeans/ide/bin/nativeexecution/SunOS-sparc_64
 	rm -rf debian/netbeans/usr/share/netbeans/harness/launchers/*.exe
 	rm -rf debian/netbeans/usr/share/netbeans/platform/lib/*.exe
