@@ -1,9 +1,10 @@
-![Screenshot](https://raw.githubusercontent.com/Vitexus/netbeans.deb/master/netbeans.png)
+![Screenshot](netbeans.png?raw=true)
 
 Apache Netbeans Debian package
 ==============================
 
-Repacked binary of https://github.com/apache/incubator-netbeans ready to use with Debian
+Repacked binary of https://github.com/apache/netbeans ready to use with Debian 10+ with Extended Mozilla browsers patch 
+https://github.com/apache/netbeans/pull/2495 applied.
 
 
 Installation
@@ -17,15 +18,8 @@ sudo apt install netbeans
 	    
 ```
 
-or 
 
-```shell
-igdebi http://repo.vitexsoftware.cz/pool/buster/main/n/netbeans/netbeans_11.3.1_all.deb
-```
-
-
-
-![Screenshot](https://raw.githubusercontent.com/Vitexus/netbeans.deb/master/screenshot.png)
+![Screenshot](screenshot.png?raw=true)
 
 
 
@@ -33,3 +27,4 @@ See also
 --------
 
  * https://github.com/VitexSoftware/netbeans-php-tools
+ * https://github.com/VitexSoftware/php-tools
