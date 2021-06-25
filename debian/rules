@@ -20,6 +20,10 @@ include /usr/share/dpkg/default.mk
 # package maintainers to append LDFLAGS
 #export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
+override_dh_prep:
+	if [ ! -d netbeans ]; then git clone git@github.com:Vitexus/netbeans.git --depth 1 ; else cd netbeans; git pull; cd ..; fi;
+	dh_prep
+
 override_dh_auto_build:
 	ant -DuseExternalJarsOnLinux=true  -Dpermit.jdk9.builds=true  -buildfile netbeans/build.xml build-nozip
 # main packaging script based on dh7 syntax
