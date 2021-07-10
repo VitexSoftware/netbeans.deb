@@ -25,11 +25,8 @@ include /usr/share/dpkg/default.mk
 	dh $@  --with maven_repo_helper
 
 
-override_dh_prep:
-	if [ ! -d netbeans ]; then git clone https://github.com/Vitexus/netbeans.git --depth 1 ; else cd netbeans; git pull; cd ..; fi;
-	dh_prep
-
 override_dh_auto_build:
+	if [ ! -d netbeans ]; then git clone https://github.com/Vitexus/netbeans.git --depth 1 ; else cd netbeans; git pull; cd ..; fi;
 	ant -DuseExternalJarsOnLinux=true  -Dpermit.jdk9.builds=true  -buildfile netbeans/build.xml build-nozip
 
 override_dh_install:
