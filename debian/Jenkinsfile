@@ -20,27 +20,6 @@ pipeline {
     
     stages {
 
-
-        stage('debian-bullseye') {
-            agent {
-                docker { image 'vitexsoftware/debian:bullseye' }
-            }
-            steps {
-                dir('build/debian/package') {
-                    checkout scm
-	            buildPackage()
-	            installPackages()
-                }
-                stash includes: 'dist/**', name: 'dist-bullseye'
-            }
-            post {
-                success {
-                    archiveArtifacts 'dist/debian/'
-                    copyArtifact()
-                }
-            }
-        }
-
         stage('debian-bookworm') {
             agent {
                 docker { image 'vitexsoftware/debian:bookworm' }
